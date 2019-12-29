@@ -1,0 +1,104 @@
+<html>
+	<head>
+        <title>{{ page.fullname }} - {{ page.job_title }}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+		<script src="assets/js/script.js"></script>
+	</head>
+
+	<body>
+		<a href="#" onclick="showMenu(); return false;" id="menu-button">MENU</a>
+
+		<a href="#" onclick="closeMenu(); return false;" id="close-button"><span class="fas fa-times"></span></a>
+
+		<div id="menu">
+			<nav>
+				<ul>
+					<li><a href="#home" onclick="closeMenu();">HOME</span></a></li>
+					<li><a href="#about" onclick="closeMenu();">ABOUT</a></li>
+					<li><a href="#education" onclick="closeMenu();">EDUCATION</a></li>
+					<li><a href="#employment" onclick="closeMenu();">EMPLOYMENT</a></li>
+					<li><a href="#contact" onclick="closeMenu();">CONTACT</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<header>
+            <h1>{{ page.fullname | upcase }}</h1>
+		</header>
+
+		<main>
+			<div id="home">
+				<div id="image"><img src="assets/images/profile.jpg" id="image-profile"></div>
+
+				<div id="summary">
+					<div id="summary-content">
+                        <h2>{{ page.fullname | upcase }}</h2>
+                        <h3>{{ page.job_title | upcase }}</h3>
+
+						<ul>
+							<li id="map-marker">
+                                <a href="#"><span class="fas fa-map-marker-alt"></span> {{ page.location }}</a>
+							</li>
+							<li>
+								<a href="#contact"><span class="fas fa-envelope"></span> Ask a question</a>
+							</li>
+							<li>
+                                <a href="{{ page.linkedin_url }}"><span class="fab fa-linkedin"></span> Connect on Linkedin</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div id="mobile-links">
+				<a><span class="fas fa-map-marker-alt"></span></a>
+				<a href="#contact"><span class="fas fa-envelope"></span></a>
+                <a href="{{ page.linkedin_url }}"><span class="fab fa-linkedin"></span></a>
+			</div>
+
+			<section id="about">
+				<article class="">
+                    {{ content | markdownify }}
+				</article>
+			</section>
+
+            {% include experience.html %}
+
+			<section id="contact">
+				<article class="">
+				<h2>CONTACT</h2>
+				<form
+                  action="{{ page.formspree_url }}"
+				  method="POST"
+				>
+				  <label>
+				    <p>Name:</p>
+				    <input type="text" name="name" id="name" required>
+				  </label>
+				  <label>
+				    <p>Email:</p>
+				    <input type="email" name="_replyto" id="email" required>
+				  </label>
+				  <label>
+				    <p>Message:</p>
+				    <textarea name="message" id="message" required></textarea>
+				  </label>
+				
+				  <!-- your other form fields go here -->
+				
+				  <button type="submit" id="submit">Send</button>
+				</form>
+				
+			</section>
+			<footer>
+
+				<a href="#home"><span class="fas fa-angle-up"></span></a>
+			</footer>
+		</main>
+	</body>
+</html>

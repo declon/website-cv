@@ -1,0 +1,7 @@
+{% for experience in site.experiences %}
+<section id="{{ experience.type | downcase }}">
+        <article class="">
+            {{ experience.content | markdownify }}
+        </article>
+    </section>
+{% endfor %}

@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set global font-family */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  transition-duration: 0.2s;
+}
+
+p {
+    margin: 1em 0;
+}
+
+/* Mobile Menu */
+
+#menu-button {
+  z-index: 100;
+
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 5 10px;
+
+  background-color: #006363;
+  border-radius: 5px;
+
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-decoration: none;
+  line-height: 1.8rem;
+}
+
+#menu-button:hover {
+  background-color: #00a5a5;
+}
+
+#menu {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 500;
+
+  background-color: #006363;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+nav {
+  height: 75%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul {
+
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+nav li {
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+nav a:hover {
+  color: #00a5a5;
+}
+
+#close-button {
+  z-index: 600;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  text-decoration: none;
+
+  padding: 2 14px;
+  line-height: 1.8rem;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+/* Page Header */
+
+header {
+  position: absolute;
+  width: 100%;
+
+  background-color: white;
+  color: #006363;
+  box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.2);
+}
+
+
+h1 {
+  padding: 18px 15px;
+
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  line-height: 1.6rem;
+  color: #006363;
+  background-color: white;
+}
+
+/* Page intro (Image and Summary) */
+
+#home {
+  background-color: grey;
+  max-height: 800px;
+
+  padding-top: 55px;
+
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+#image {
+  max-height: 800px;
+  overflow: hidden;
+
+  background-color: #00a5a5;
+}
+
+#image-profile {
+  width: 100%;
+}
+
+#summary {
+  background-color: #00a5a5;
+  width: 50%;
+
+  max-height: 800px;
+  display: none;
+
+  color: white;
+}
+
+#summary-content h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+#summary-content h3 {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #006363;
+}
+
+#summary-content ul {
+  margin-top: 40px;
+  font-size: 1rem;
+}
+
+#summary-content li {
+  padding: 10px 0px;
+}
+
+#summary-content #map-marker{
+  padding-left: 3px;
+}
+
+#summary-content a {
+  text-decoration: none;
+  color: white;
+}
+#summary-content a:hover {
+  color: #006363;
+}
+
+/* Quick links for mobile site */
+
+#mobile-links {
+  background: white;
+
+  height: 100px;
+  width: 100%;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+}
+
+#mobile-links a {
+  color: #006363;
+  text-decoration: none;
+  font-size: 2rem;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+#mobile-links a:hover {
+  color: #00a5a5;
+}
+
+/* Beginning of conent */
+
+section {
+  color: #006363;
+  padding: 60px 0px;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+
+  border-top: 1px solid #00a5a5;
+}
+
+article {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+
+  text-align: justify;
+}
+
+#about {
+  border-top: none;
+  padding-top: 20px;
+}
+
+article h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+article li {
+  font-size: 1.2rem;
+}
+
+/* Education Listing*/
+
+.education-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+#education li, #employment li {
+  text-align: right;
+  margin: 1rem;
+}
+
+#education h3, #employment h3 {
+  font-weight: 800;
+  background-color: #006363;
+  color: white;
+
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+/* Contact form */
+
+#contact-wrap {
+  background-color: #00a5a5;
+  min-width: 100%;
+}
+
+section h2 {
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
+form {
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  /* align-content: center; 
+  background-color: #006363; */
+  color: #006363;
+}
+
+input, textarea {
+  padding: 5px;
+  margin: 10px 0;
+}
+
+#submit, #email, #name, #message {
+  border: 1px solid #006363;
+  border-radius: 5px;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  width: 100%;
+}
+
+#message {
+    min-height: 150px;
+}
+
+#submit {
+  background-color: #006363;
+  color: white;
+  padding: 1rem;
+  margin-top: 15px;
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+#submit:hover {
+  background-color: #00a5a5;
+  cursor:pointer;
+}
+/* Footer */
+
+footer {
+  background-color: #006363;
+  height: 100px;
+
+  padding-top: 30px;
+  text-align: center;
+  font-size: 3rem;
+  color: #00a5a5;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  color: #00a5a5;
+}
+
+@media only screen and (min-width: 761px) {
+
+  header {position: fixed;}
+
+  section {min-height: 400px}
+
+  #summary {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #image {width: 50%;}
+
+  #mobile-links {display: none}
+}
+
+@media only screen and (min-width: 1100px) {
+  html {font-size: 19px}
+  section {min-height: 500px}
+}
+
+@media only screen and (min-width: 1600px) {
+  html {font-size: 22px}
+  #menu-button {font-size: 0.8rem}
+}
