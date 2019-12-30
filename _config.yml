@@ -1,4 +1,6 @@
-theme: jekyll-theme-minimal
+#theme: jekyll-theme-minimal
+plugins:
+    - jekyll-seo-tag
 
 collections:
     experiences:
