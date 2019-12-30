@@ -1,6 +1,8 @@
 #theme: jekyll-theme-minimal
+url: https://www.declanlongley.net
 plugins:
     - jekyll-seo-tag
+    - jekyll-sitemap
 
 collections:
     experiences:

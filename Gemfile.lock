@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/jekyll/jekyll-sitemap.git
+  revision: cf585a99ce4337884fa64f12f5b0fef6b07e349f
+  specs:
+    jekyll-sitemap (1.4.0)
+      jekyll (>= 3.7, < 5.0)
+
 GEM
   specs:
     addressable (2.7.0)
@@ -62,6 +69,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   jekyll-seo-tag
+  jekyll-sitemap!
 
 BUNDLED WITH
    2.1.2
